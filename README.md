@@ -9,7 +9,6 @@ This program takes one argument, a number between 2 - 9, which represents the nu
 The program will print every stage in the sorting process to the screen. You will be require to press the `Enter` key to iterate through the stages.
 
 ## How It Works
-
 The array of unsigned integers will be referred to as `peg`. Each item of the array represents the size of the `disk` at that position on the `disk`.
 
 The program starts by checking if the argument is valid.
