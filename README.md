@@ -14,7 +14,7 @@ The array of unsigned integers will be referred to as `peg`. Each item of the ar
 
 The program starts by checking if the argument is valid.
 
-The peg is then initialized with a random array of numbers by the subprogram, `rconf`, which is located in `driver.c`. `rconf` takes the number of disks and the address of the array representing the peg.
+The `peg` is then initialized with a random array of numbers by the subprogram, `rconf`, which is located in `driver.c`. `rconf` takes the number of disks and the address of the array representing the `peg`.
 
 The program will then sort this array in descending order through the use of recursion. The program will recursively call the sorting subprogram and each time it is reducing the size of the array by 1 (similar to bottom-up merge sort). The program then swaps each element until the next element is smaller than the current element (i.e. peg[i] > peg[i + 1]). Once all the recursive calls are complete, the array is now sorted.
 
