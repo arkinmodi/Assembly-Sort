@@ -60,4 +60,4 @@ The program will then sort this array in descending order through the use of rec
          XXXXXXXXXXXXXXXXXXXXXXX
 
 ### Note
-Only `sorthem.asm` and `makefile` were made my me. The other files were provided by the professor, [Dr. Frantisek Franek](http://www.cas.mcmaster.ca/~franek/).
+Only `sorthem.asm` and `makefile` were made my me. The other files were provided by [Dr. Frantisek Franek](http://www.cas.mcmaster.ca/~franek/).
