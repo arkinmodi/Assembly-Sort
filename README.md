@@ -4,9 +4,24 @@ The Final Project for SFWRENG 2XA3 - Software Development Skills.
 ## Overview
 A sorting algorithm implemented as a NSAM program.
 
-This program takes one argument, a number between 2 - 9, which represents the number of integer elements to sort. The elements range from 1 to the inputted argument.
+This program takes one argument, a number between 2 - 9 (inclusive), which represents the number of integer elements to sort. The elements range from 1 to the inputted argument.
 
 The program will print every stage in the sorting process to the screen. You will be require to press the `Enter` key to iterate through the stages.
+
+## How To Run
+(Recommended) To build and run using Docker, run the following:
+```
+docker build -t sorthem .
+docker run -it --rm sorthem <a number between 2 and 9>
+```
+
+To build and run locally, run the following:
+```
+make sorthem
+./sorthem <a number between 2 and 9>
+```
+
+> Note: This is a 32-bit application and may require additional packages to get building/running.
 
 ## How It Works
 The array of unsigned integers will be referred to as `peg`. Each item of the array represents the size of the `disk` at that position on the `disk`.
