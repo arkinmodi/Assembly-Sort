@@ -9,7 +9,12 @@ This program takes one argument, a number between 2 - 9 (inclusive), which repre
 The program will print every stage in the sorting process to the screen. You will be require to press the `Enter` key to iterate through the stages.
 
 ## How To Run
-(Recommended) To build and run using Docker, run the following:
+(Recommended) Use the [prebuilt Docker image](https://hub.docker.com/r/arkinmodi/sorthem), by running the following:
+```
+docker run -it --rm arkinmodi/sorthem <a number between 2 and 9>
+```
+
+To build and run using Docker, run the following:
 ```
 docker build -t sorthem .
 docker run -it --rm sorthem <a number between 2 and 9>
