@@ -99,7 +99,7 @@ swap:
 	leave
 	ret
 
-sorthem:
+assembly_sort:
 	enter 0,0	; setup routine
 	pusha		; save all registers
 
@@ -108,14 +108,14 @@ sorthem:
 
 	; base case
 	cmp ecx, 1
-	je sorthem_end
+	je assembly_sort_end
 
 	; recursive call	
 	add edx, 4
 	dec ecx
 	push ecx
 	push edx
-	call sorthem
+	call assembly_sort
 	pop eax
 	pop eax
 	sub edx, 4
@@ -125,7 +125,7 @@ sorthem:
 	; sorts the current first entry
     LOOP_SORT:
 	cmp ebx, ecx
-	je sorthem_end
+	je assembly_sort_end
 	inc ebx
 
 	mov eax, dword [edx]
@@ -150,7 +150,7 @@ sorthem:
 	pop eax
 	jmp L2
 
-    sorthem_end:
+    assembly_sort_end:
 	popa
 	leave
 	ret	
@@ -200,7 +200,7 @@ asm_main:
 	call showp
 	call showp	; the example did this
 
-	call sorthem
+	call assembly_sort
 
 	; print "final configuration"
 	mov eax, finconfig

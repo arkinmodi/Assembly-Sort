@@ -1,10 +1,10 @@
-all: sorthem
+all: assembly-sort
 
-sorthem: sorthem.o asm_io.o driver.c
-	gcc -m32 -o sorthem sorthem.o driver.c asm_io.o
+assembly-sort: assembly-sort.o asm_io.o driver.c
+	gcc -m32 -o assembly-sort assembly-sort.o driver.c asm_io.o
 asm_io.o: asm_io.asm
 	nasm -f elf32 -d ELF_TYPE asm_io.asm
-sorthem.o: sorthem.asm
-	nasm -f elf32 -o sorthem.o sorthem.asm
+assembly-sort.o: assembly-sort.asm
+	nasm -f elf32 -o assembly-sort.o assembly-sort.asm
 clean:
-	rm *.o sorthem
+	rm *.o assembly-sort

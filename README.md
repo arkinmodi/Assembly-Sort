@@ -9,21 +9,21 @@ This program takes one argument, a number between 2 - 9 (inclusive), which repre
 The program will print every stage in the sorting process to the screen. You will be require to press the `Enter` key to iterate through the stages.
 
 ## How To Run
-(Recommended) Use the [prebuilt Docker image](https://hub.docker.com/r/arkinmodi/sorthem), by running the following:
+(Recommended) Use the [prebuilt Docker image](https://github.com/arkinmodi/Assembly-Sort/pkgs/container/assembly-sort), by running the following:
 ```
-docker run -it --rm arkinmodi/sorthem <a number between 2 and 9>
+docker run -it --rm ghcr.io/arkinmodi/assembly-sort:latest <a number between 2 and 9>
 ```
 
 To build and run using Docker, run the following:
 ```
-docker build -t sorthem .
-docker run -it --rm sorthem <a number between 2 and 9>
+docker build -t assembly-sort .
+docker run -it --rm assembly-sort <a number between 2 and 9>
 ```
 
 To build and run locally, run the following:
 ```
-make sorthem
-./sorthem <a number between 2 and 9>
+make assembly-sort
+./assembly-sort <a number between 2 and 9>
 ```
 
 > Note: This is a 32-bit application and may require additional packages to get building/running.
@@ -38,7 +38,7 @@ The `peg` is then initialized with a random array of numbers by the subprogram, 
 The program will then sort this array in descending order through the use of recursion. The program will recursively call the sorting subprogram and each time it is reducing the size of the array by 1 (similar to bottom-up merge sort). The program then swaps each element until the next element is smaller than the current element (i.e. peg[i] > peg[i + 1]). Once all the recursive calls are complete, the array is now sorted.
 
 ## Example
-    ./sorthem 4
+    ./assembly-sort 4
 
           initial configuration
 
@@ -79,4 +79,4 @@ The program will then sort this array in descending order through the use of rec
          XXXXXXXXXXXXXXXXXXXXXXX
 
 ### Note
-Only `sorthem.asm` and `makefile` were made my me. The other files were provided by [Dr. Frantisek Franek](http://www.cas.mcmaster.ca/~franek/).
+Only `assembly-sort.asm` and `makefile` were made my me. The other files were provided by [Dr. Frantisek Franek](http://www.cas.mcmaster.ca/~franek/).

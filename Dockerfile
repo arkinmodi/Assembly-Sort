@@ -6,5 +6,5 @@ RUN apt-get update \
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
-RUN make sorthem
-ENTRYPOINT [ "./sorthem" ]
+RUN make assembly-sort
+ENTRYPOINT [ "./assembly-sort" ]
